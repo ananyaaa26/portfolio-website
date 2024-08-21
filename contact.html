@@ -67,7 +67,6 @@
         .footer a:hover {
             text-decoration: underline;
         }
-      
         .footer-bottom a {
             color: #edf6f9;
             text-decoration: none;
@@ -75,41 +74,36 @@
         .footer-bottom a:hover {
             text-decoration: underline;
         }
-        .profile-img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            margin: 0 auto; 
-            display: block;
+        /* Contact Form */
+        .contact-section {
+            padding: 50px 0;
         }
-        .profile-text h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
+        .contact-section h2 {
+            font-weight: bold;
+            margin-bottom: 30px;
         }
-        .profile-text p {
-            font-size: 1rem;
-            color: #666;
-            margin-top: 20px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        .contact-section p {
+            margin-bottom: 20px;
         }
-        .profile-summary {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            background-color: #edf6f9;
-            justify-content: center;
+        .contact-section form input,
+        .contact-section form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
-        .profile-summary h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0;
+        .contact-section form button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        .profile-summary span {
-            font-size: 1.2rem;
-            color: #666;
-            margin-left: 10px;
+        .contact-section form button:hover {
+            background-color: #666;
         }
     </style>
 </head>
@@ -141,28 +135,38 @@
             </div>
         </div>
     </nav>
-  
+ 
 </header>
 <body>
 
-     <br>
-     <br>
-     <br>
-    <section class="profile-section">
+    <section class="contact-section">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-4 text-center">
-                    <img src="image.jpg" alt="Profile Image" class="profile-img">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Contact</h2>
+                    <p>Looking forward to hearing from you</p>
+                    <p><strong>Phone:</strong> 123-456-7890</p>
+                    <p><strong>Email:</strong> info@mysite.com</p>
                 </div>
-                <div class="col-md-8 profile-text">
-                    <h1>Hello, I'm Ananya Tuli</h1>
-                    <p>I'm currently a second-year student pursuing a degree in Computer Science Engineering. I have a strong passion for technology and programming. While I don't have formal work experience yet,
-                    I'm eager to continue learning and exploring new technologies to build innovative projects.</p>
+                <div class="col-md-6">
+                    <form action="#" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="first_name" placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="last_name" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <input type="email" name="email" placeholder="Email *" required>
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="message" rows="5" placeholder="Message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-    <br><Br>
 
 </body>
 
